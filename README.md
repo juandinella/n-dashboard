@@ -1,11 +1,4 @@
-![PennyFramework](penny.png)
-
-#### Tiny but powerful
-
-Many thanks to [**@mpalau**](http:///twitter.com/mpalau) & [**@necsoft**](http:///twitter.com/necsoft)
-
-
-Frontend Boilerplate
+#Neolo Dashboard
 
 ## Prerequisites
 - NodeJS (^4.5 Recommended) - [How to install](https://nodejs.org/es/download/package-manager/)
