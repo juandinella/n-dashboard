@@ -1,0 +1,124 @@
+
+
+.stats {
+  fill: $blue;
+  width: rem(23px);
+  height: rem(17px);
+  stroke: none;
+  cursor: pointer;
+} 
+
+.flex-row {
+	display: flex;
+	background-color: $white;
+  color: $gray;
+  flex-direction: column;
+  padding-top: rem(15px);
+  padding-bottom: rem(15px);
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+  border: 1px solid $gray-light;
+  transition: all 0.225s ease;
+  
+  &:hover {
+    background-color: rgba($blue, 0.1);
+  }
+  
+  @include breakpoint(sm) {
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: rem(20px);
+    padding-bottom: rem(20px);
+  }
+  
+  .column:not(:first-of-type) {
+    justify-content: space-between;
+    border-bottom: 1px solid #E8EEF0;
+    padding-top: rem(5px);
+    padding-bottom: rem(5px);
+    
+    @include breakpoint(sm) {
+      justify-content: center;
+      border: 0 none;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  
+  .column {
+    line-height: 1.5;
+    
+    &:first-of-type {
+      padding-left: rem(15px);
+      justify-content: center;
+      font-weight: 600;
+      margin-bottom: rem(15px);
+      
+      @include breakpoint(sm) {
+        justify-content: baseline;
+        margin-bottom: 0;
+      }
+      
+      @include breakpoint(md) {
+        padding-left: rem(30px);
+      }
+    }
+    
+    &:last-of-type {
+      flex: 0;
+      padding-left: rem(40px);
+      padding-right: rem(40px);
+      justify-content: center;
+      margin-top: rem(15px);
+      border-bottom: 0 none;
+      
+      @include breakpoint(sm) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.header {
+	background-color: $gray-light;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: rem(14px);
+  padding-top: rem(16px);
+  padding-bottom: rem(16px);
+  display: none;
+  letter-spacing: rem(1px);
+  
+  @include breakpoint(sm) {
+    font-size: rem(16px);
+    display: flex;
+  }
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+  
+  &::before {
+    content: attr(data-heading);
+  }
+  
+  @include breakpoint(sm) {
+    flex: 1;
+  	text-align: center;
+    
+    &:before {
+      content: none;
+    }
+  }
+}
+
+
+.even {
+  background-color: #F7F7F7;
+}
+
+.red {
+  color: $red;
+}
