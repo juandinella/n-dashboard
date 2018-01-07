@@ -5,12 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <link rel="icon" href="img/favicon.ico">
-    <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="theme-color" content="#2F96E9">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.2.2/css/rowReorder.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.css">
   </head>
   <body>
     <div class="is-hidden"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="arrow"><path d="M12.304 29.483a1.51 1.51 0 0 0 1.115.517c.398 0 .812-.178 1.115-.517a1.901 1.901 0 0 0 0-2.493L3.812 15.002 14.534 3.015a1.901 1.901 0 0 0 0-2.494c-.621-.695-1.61-.695-2.23 0L.466 13.755a1.901 1.901 0 0 0 0 2.494l11.838 13.234z"/></symbol><symbol id="stats"><path d="M7.143 8.857v5.714H4.286V8.857h2.857zm4.286-5.714V14.57H8.57V3.143h2.858zM22.857 16v1.429H0V.286h1.429V16h21.428zM15.714 6v8.571h-2.857V6h2.857zM20 1.714v12.857h-2.857V1.714H20z" fill-rule="evenodd"/></symbol></svg></div>
@@ -38,6 +34,24 @@
             <div class="column">C</div>
             <div class="column">Consolidado</div>
             <div class="column"></div>
+          </div>
+          <div class="flex-row">
+            <div class="column">Tickets sin responder ahora</div>
+            <div class="column" data-heading="AR"><span>0</span></div>
+            <div class="column" data-heading="C"><span>0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>0</span></div>
+            <div class="column"></div>
+          </div>
+          <div class="flex-row even">
+            <div class="column">Altas activas</div>
+            <div class="column" data-heading="AR"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
+            <div class="column" data-heading="C"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
+            <div class="column statToggle">
+              <svg class="icon stats">
+                <use xlink:href="#stats"></use>
+              </svg>
+            </div>
           </div>
           <div class="flex-row">
             <div class="column">Facturación</div>
@@ -73,17 +87,6 @@
             </div>
           </div>
           <div class="flex-row even">
-            <div class="column">Altas activas</div>
-            <div class="column" data-heading="AR"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
-            <div class="column" data-heading="C"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
-            <div class="column" data-heading="CONSOLIDADO"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
-            <div class="column">
-              <svg class="icon stats">
-                <use xlink:href="#stats"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="flex-row">
             <div class="column">Altas inactivas</div>
             <div class="column" data-heading="AR"><span>0 (<span class="red">N/A%</span>)</span></div>
             <div class="column" data-heading="C"><span>0 (<span class="red">N/A%</span>)</span></div>
@@ -94,9 +97,121 @@
               </svg>
             </div>
           </div>
+          <div class="flex-row">
+            <div class="column">Clientes totales</div>
+            <div class="column" data-heading="AR"><span>3004</span></div>
+            <div class="column" data-heading="C"><span>731</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>3735</span></div>
+            <div class="column">
+              <svg class="icon stats">
+                <use xlink:href="#stats"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-row even">
+            <div class="column">ARPU</div>
+            <div class="column" data-heading="AR"><span>$0.00</span></div>
+            <div class="column" data-heading="C"><span>$0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>$0.00</span></div>
+            <div class="column">
+              <svg class="icon stats">
+                <use xlink:href="#stats"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-row">
+            <div class="column">Sesiones</div>
+            <div class="column" data-heading="AR"><span> </span></div>
+            <div class="column" data-heading="C"><span> </span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>Nan</span></div>
+            <div class="column">
+              <svg class="icon stats">
+                <use xlink:href="#stats"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-row even">
+            <div class="column">Boletas generadas</div>
+            <div class="column" data-heading="AR"><span>(<span class="red">N/A%</span>)</span></div>
+            <div class="column" data-heading="C"><span>(<span class="red">N/A%</span>)</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>(<span class="red">N/A%</span>)</span></div>
+            <div class="column">
+              <svg class="icon stats">
+                <use xlink:href="#stats"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-row">
+            <div class="column">Tickets abiertos</div>
+            <div class="column" data-heading="AR"><span>0</span></div>
+            <div class="column" data-heading="C"><span>0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>0</span></div>
+            <div class="column"></div>
+          </div>
+          <div class="flex-row even">
+            <div class="column">Tickets respondidos Yazmin</div>
+            <div class="column" data-heading="AR"><span>0</span></div>
+            <div class="column" data-heading="C"><span>0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>0</span></div>
+            <div class="column"></div>
+          </div>
+          <div class="flex-row">
+            <div class="column">Tickets respondidos Camila</div>
+            <div class="column" data-heading="AR"><span>0</span></div>
+            <div class="column" data-heading="C"><span>0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>0</span></div>
+            <div class="column"></div>
+          </div>
+          <div class="flex-row even">
+            <div class="column">Tickets respondidos Juan</div>
+            <div class="column" data-heading="AR"><span>0</span></div>
+            <div class="column" data-heading="C"><span>0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>0</span></div>
+            <div class="column"></div>
+          </div>
+          <div class="flex-row">
+            <div class="column">Tickets respondidos Fernando</div>
+            <div class="column" data-heading="AR"><span>0</span></div>
+            <div class="column" data-heading="C"><span>0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>0</span></div>
+            <div class="column"></div>
+          </div>
+          <div class="flex-row even">
+            <div class="column">Invoices generados</div>
+            <div class="column" data-heading="AR"><span>0</span></div>
+            <div class="column" data-heading="C"><span>0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>0</span></div>
+            <div class="column"></div>
+          </div>
+          <div class="flex-row">
+            <div class="column">Invoices pagas</div>
+            <div class="column" data-heading="AR"><span>0</span></div>
+            <div class="column" data-heading="C"><span>0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>0</span></div>
+            <div class="column"></div>
+          </div>
+          <div class="flex-row even">
+            <div class="column">Invoices pago rate</div>
+            <div class="column" data-heading="AR"><span>0</span></div>
+            <div class="column" data-heading="C"><span>0</span></div>
+            <div class="column" data-heading="CONSOLIDADO"><span>0</span></div>
+            <div class="column"></div>
+          </div>
         </div>
       </div>
     </section>
+    <div class="overlay"></div>
+    <div class="modal">
+      <div class="modal-content">
+        <div class="close">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.769 10l7.865-7.865A1.25 1.25 0 1 0 17.865.366L10 8.232 2.135.366a1.25 1.25 0 1 0-1.769 1.77L8.232 10 .366 17.865a1.25 1.25 0 1 0 1.769 1.769L10 11.768l7.865 7.866a1.247 1.247 0 0 0 1.769 0 1.25 1.25 0 0 0 0-1.77L11.769 10z" fill="#74838B" fill-rule="nonzero"></path>
+          </svg>
+        </div>
+        <h3>Altas activas</h3>
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
     <script src="js/vendor.js"></script>
     <script src="js/app.js"></script>
   </body>

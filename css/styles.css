@@ -397,11 +397,13 @@ h6
 
 .flex-row .column
 {
+    font-size: .875rem;
     line-height: 1.5;
 }
 
 .flex-row .column:first-of-type
 {
+    font-size: 1rem;
     font-weight: 600;
 
     margin-bottom: .9375rem;
@@ -470,6 +472,120 @@ h6
     color: #d35656;
 }
 
+.overlay
+{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+
+    -webkit-transition: all .225s ease;
+            transition: all .225s ease;
+
+    opacity: 0;
+    background-color: rgba(76, 76, 76, .5);
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.overlay.is-active
+{
+    visibility: visible;
+
+    opacity: 1;
+}
+
+.modal
+{
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+
+    visibility: hidden;
+
+    width: 100%;
+    max-width: 90rem;
+
+    -webkit-transition: all .225s ease;
+            transition: all .225s ease;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+    opacity: 0;
+}
+
+.modal-content
+{
+    position: relative;
+    z-index: 3;
+
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    margin: 0 auto;
+    padding: 1.25rem;
+
+    text-align: center;
+
+    border-radius: 4px;
+    background-color: white;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+}
+
+.modal-content h3
+{
+    font-weight: 600;
+
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+
+    letter-spacing: .0625rem;
+
+    color: #74838b;
+}
+
+.modal.is-active
+{
+    visibility: visible;
+
+    opacity: 1;
+}
+
+.close
+{
+    float: right;
+
+    cursor: pointer;
+}
+
+.close svg path
+{
+    -webkit-transition: all .225s ease;
+            transition: all .225s ease;
+
+    fill: #74838b;
+}
+
+.close svg path:hover
+{
+    fill: #4c4c4c;
+}
+
 @media (min-width: 48rem)
 {
     .container
@@ -509,9 +625,18 @@ h6
         justify-content: center;
     }
 
+    .flex-row .column
+    {
+        font-size: 1rem;
+    }
+
     .flex-row .column:first-of-type
     {
+        font-size: 1rem;
+
         margin-bottom: 0;
+
+        text-align: left;
 
         -webkit-box-pack: baseline;
         -ms-flex-pack: baseline;
@@ -544,6 +669,11 @@ h6
     .column:before
     {
         content: none;
+    }
+
+    .modal
+    {
+        width: 70%;
     }
 }
 
