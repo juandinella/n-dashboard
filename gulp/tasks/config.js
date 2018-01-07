@@ -10,15 +10,12 @@ module.exports = {
   // Here you add the paths to the full-length js files from your Bower imports
   scriptFiles: [
     './node_modules/jquery/dist/jquery.js',
-    './node_modules/datatables.net/js/jquery.dataTables.js',
-    './node_modules/datatables.net-rowreorder/js/dataTables.rowReorder.js',
-    './node_modules/datatables.net-responsive/js/dataTables.responsive.js'
+    './node_modules/chart.js/dist/Chart.min.js'
   ],
 
   // Asset File Paths
   assets: [
-    './src/assets/**/*',
-    './node_modules/datatables.net-dt/images/**/*'
+    './src/assets/**/*'
   ],
 
   // Fonts Path

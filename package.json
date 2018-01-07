@@ -52,9 +52,6 @@
     "penny-mixins": "git://github.com/juandinella/penny-mixins.git"
   },
   "dependencies": {
-    "datatables.net": "^1.10.16",
-    "datatables.net-dt": "^1.10.16",
-    "datatables.net-responsive": "^2.2.1",
-    "datatables.net-rowreorder": "^1.2.3"
+    "chart.js": "^2.7.1"
   }
 }

@@ -8,45 +8,150 @@ section
         .column Consolidado
         .column
       .flex-row
-        .column() Facturación
-        .column(data-heading='AR'): span $0.00 (#[span.red -100.00%])
-        .column(data-heading='C'): span $0.00 (#[span.red -100.00%])
-        .column(data-heading='CONSOLIDADO'): span $0.00 (#[span.red -100.00%])
-        .column()
-          svg(class="icon stats")
-            use(xlink:href="#stats")
+        .column Tickets sin responder ahora
+        .column(data-heading='AR'): span 0
+        .column(data-heading='C'): span 0
+        .column(data-heading='CONSOLIDADO'): span 0
+        .column
+          
       .flex-row.even
-        .column() Transacciones
+        .column Altas activas
         .column(data-heading='AR'): span $0.00 (#[span.red -100.00%])
         .column(data-heading='C'): span $0.00 (#[span.red -100.00%])
         .column(data-heading='CONSOLIDADO'): span $0.00 (#[span.red -100.00%])
-        .column()
+        .column.statToggle
           svg(class="icon stats")
             use(xlink:href="#stats")
       .flex-row
-        .column() Altas totales
+        .column Facturación
         .column(data-heading='AR'): span $0.00 (#[span.red -100.00%])
         .column(data-heading='C'): span $0.00 (#[span.red -100.00%])
         .column(data-heading='CONSOLIDADO'): span $0.00 (#[span.red -100.00%])
-        .column()
+        .column
           svg(class="icon stats")
             use(xlink:href="#stats")
               
       .flex-row.even
-        .column() Altas activas
+        .column Transacciones
         .column(data-heading='AR'): span $0.00 (#[span.red -100.00%])
         .column(data-heading='C'): span $0.00 (#[span.red -100.00%])
         .column(data-heading='CONSOLIDADO'): span $0.00 (#[span.red -100.00%])
-        .column()
+        .column
           svg(class="icon stats")
             use(xlink:href="#stats")
               
       .flex-row
-        .column() Altas inactivas
+        .column Altas totales
+        .column(data-heading='AR'): span $0.00 (#[span.red -100.00%])
+        .column(data-heading='C'): span $0.00 (#[span.red -100.00%])
+        .column(data-heading='CONSOLIDADO'): span $0.00 (#[span.red -100.00%])
+        .column
+          svg(class="icon stats")
+            use(xlink:href="#stats")
+              
+      .flex-row.even
+        .column Altas inactivas
         .column(data-heading='AR'): span 0 (#[span.red N/A%])
         .column(data-heading='C'): span 0 (#[span.red N/A%])
         .column(data-heading='CONSOLIDADO'): span 0 (#[span.red N/A%])
-        .column()
+        .column
           svg(class="icon stats")
             use(xlink:href="#stats")
+              
+      .flex-row
+        .column Clientes totales
+        .column(data-heading='AR'): span 3004
+        .column(data-heading='C'): span 731
+        .column(data-heading='CONSOLIDADO'): span 3735
+        .column
+          svg(class="icon stats")
+            use(xlink:href="#stats")
+              
+      .flex-row.even
+        .column ARPU
+        .column(data-heading='AR'): span $0.00
+        .column(data-heading='C'): span $0
+        .column(data-heading='CONSOLIDADO'): span $0.00
+        .column
+          svg(class="icon stats")
+            use(xlink:href="#stats")
+              
+      .flex-row
+        .column Sesiones
+        .column(data-heading='AR'): span 
+        .column(data-heading='C'): span 
+        .column(data-heading='CONSOLIDADO'): span Nan
+        .column
+          svg(class="icon stats")
+            use(xlink:href="#stats")
+              
+      .flex-row.even
+        .column Boletas generadas
+        .column(data-heading='AR'): span (#[span.red N/A%])
+        .column(data-heading='C'): span (#[span.red N/A%])
+        .column(data-heading='CONSOLIDADO'): span (#[span.red N/A%])
+        .column
+          svg(class="icon stats")
+            use(xlink:href="#stats")
+              
+      .flex-row
+        .column Tickets abiertos
+        .column(data-heading='AR'): span 0
+        .column(data-heading='C'): span 0
+        .column(data-heading='CONSOLIDADO'): span 0
+        .column
+
+  
+      .flex-row.even
+        .column Tickets respondidos Yazmin
+        .column(data-heading='AR'): span 0
+        .column(data-heading='C'): span 0
+        .column(data-heading='CONSOLIDADO'): span 0
+        .column
     
+      .flex-row
+        .column Tickets respondidos Camila
+        .column(data-heading='AR'): span 0
+        .column(data-heading='C'): span 0
+        .column(data-heading='CONSOLIDADO'): span 0
+        .column
+              
+      .flex-row.even
+        .column Tickets respondidos Juan
+        .column(data-heading='AR'): span 0
+        .column(data-heading='C'): span 0
+        .column(data-heading='CONSOLIDADO'): span 0
+        .column
+              
+      .flex-row
+        .column Tickets respondidos Fernando
+        .column(data-heading='AR'): span 0
+        .column(data-heading='C'): span 0
+        .column(data-heading='CONSOLIDADO'): span 0
+        .column
+    
+      .flex-row.even
+        .column Invoices generados
+        .column(data-heading='AR'): span 0
+        .column(data-heading='C'): span 0
+        .column(data-heading='CONSOLIDADO'): span 0
+        .column
+
+      
+      .flex-row
+        .column Invoices pagas
+        .column(data-heading='AR'): span 0
+        .column(data-heading='C'): span 0
+        .column(data-heading='CONSOLIDADO'): span 0
+        .column
+
+    
+      .flex-row.even
+        .column Invoices pago rate
+        .column(data-heading='AR'): span 0
+        .column(data-heading='C'): span 0
+        .column(data-heading='CONSOLIDADO'): span 0
+        .column
+
+    
+      
