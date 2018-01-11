@@ -2,6 +2,10 @@
 * rem to px
 */
 
+/**
+* EZ Breakpoints
+*/
+
 html,
 body,
 div,
@@ -553,8 +557,6 @@ h6
 
     margin-top: 1.875rem;
     margin-bottom: 1.875rem;
-
-    letter-spacing: .0625rem;
 
     color: #74838b;
 }

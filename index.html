@@ -47,7 +47,7 @@
             <div class="column" data-heading="AR"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
             <div class="column" data-heading="C"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
             <div class="column" data-heading="CONSOLIDADO"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
-            <div class="column statToggle">
+            <div class="column statToggle" id="toggle_altasActivas">
               <svg class="icon stats">
                 <use xlink:href="#stats"></use>
               </svg>
@@ -58,7 +58,7 @@
             <div class="column" data-heading="AR"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
             <div class="column" data-heading="C"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
             <div class="column" data-heading="CONSOLIDADO"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
-            <div class="column">
+            <div class="column statToggle" id="toggle_facturacion">
               <svg class="icon stats">
                 <use xlink:href="#stats"></use>
               </svg>
@@ -69,7 +69,7 @@
             <div class="column" data-heading="AR"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
             <div class="column" data-heading="C"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
             <div class="column" data-heading="CONSOLIDADO"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
-            <div class="column">
+            <div class="column statToggle" id="toggle_transacciones">
               <svg class="icon stats">
                 <use xlink:href="#stats"></use>
               </svg>
@@ -80,7 +80,7 @@
             <div class="column" data-heading="AR"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
             <div class="column" data-heading="C"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
             <div class="column" data-heading="CONSOLIDADO"><span>$0.00 (<span class="red">-100.00%</span>)</span></div>
-            <div class="column">
+            <div class="column statToggle">
               <svg class="icon stats">
                 <use xlink:href="#stats"></use>
               </svg>
@@ -91,7 +91,7 @@
             <div class="column" data-heading="AR"><span>0 (<span class="red">N/A%</span>)</span></div>
             <div class="column" data-heading="C"><span>0 (<span class="red">N/A%</span>)</span></div>
             <div class="column" data-heading="CONSOLIDADO"><span>0 (<span class="red">N/A%</span>)</span></div>
-            <div class="column">
+            <div class="column statToggle">
               <svg class="icon stats">
                 <use xlink:href="#stats"></use>
               </svg>
@@ -102,7 +102,7 @@
             <div class="column" data-heading="AR"><span>3004</span></div>
             <div class="column" data-heading="C"><span>731</span></div>
             <div class="column" data-heading="CONSOLIDADO"><span>3735</span></div>
-            <div class="column">
+            <div class="column statToggle">
               <svg class="icon stats">
                 <use xlink:href="#stats"></use>
               </svg>
@@ -113,7 +113,7 @@
             <div class="column" data-heading="AR"><span>$0.00</span></div>
             <div class="column" data-heading="C"><span>$0</span></div>
             <div class="column" data-heading="CONSOLIDADO"><span>$0.00</span></div>
-            <div class="column">
+            <div class="column statToggle">
               <svg class="icon stats">
                 <use xlink:href="#stats"></use>
               </svg>
@@ -124,7 +124,7 @@
             <div class="column" data-heading="AR"><span> </span></div>
             <div class="column" data-heading="C"><span> </span></div>
             <div class="column" data-heading="CONSOLIDADO"><span>Nan</span></div>
-            <div class="column">
+            <div class="column statToggle">
               <svg class="icon stats">
                 <use xlink:href="#stats"></use>
               </svg>
@@ -135,7 +135,7 @@
             <div class="column" data-heading="AR"><span>(<span class="red">N/A%</span>)</span></div>
             <div class="column" data-heading="C"><span>(<span class="red">N/A%</span>)</span></div>
             <div class="column" data-heading="CONSOLIDADO"><span>(<span class="red">N/A%</span>)</span></div>
-            <div class="column">
+            <div class="column statToggle">
               <svg class="icon stats">
                 <use xlink:href="#stats"></use>
               </svg>
@@ -201,7 +201,7 @@
       </div>
     </section>
     <div class="overlay"></div>
-    <div class="modal">
+    <div class="modal" id="modal_altasActivas">
       <div class="modal-content">
         <div class="close">
           <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -209,6 +209,28 @@
           </svg>
         </div>
         <h3>Altas activas</h3>
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <div class="modal" id="modal_facturacion">
+      <div class="modal-content">
+        <div class="close">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.769 10l7.865-7.865A1.25 1.25 0 1 0 17.865.366L10 8.232 2.135.366a1.25 1.25 0 1 0-1.769 1.77L8.232 10 .366 17.865a1.25 1.25 0 1 0 1.769 1.769L10 11.768l7.865 7.866a1.247 1.247 0 0 0 1.769 0 1.25 1.25 0 0 0 0-1.77L11.769 10z" fill="#74838B" fill-rule="nonzero">   </path>
+          </svg>
+        </div>
+        <h3>Facturación</h3>
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <div class="modal" id="modal_transacciones">
+      <div class="modal-content">
+        <div class="close">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.769 10l7.865-7.865A1.25 1.25 0 1 0 17.865.366L10 8.232 2.135.366a1.25 1.25 0 1 0-1.769 1.77L8.232 10 .366 17.865a1.25 1.25 0 1 0 1.769 1.769L10 11.768l7.865 7.866a1.247 1.247 0 0 0 1.769 0 1.25 1.25 0 0 0 0-1.77L11.769 10z" fill="#74838B" fill-rule="nonzero">   </path>
+          </svg>
+        </div>
+        <h3>Transacciones</h3>
         <canvas id="myChart"></canvas>
       </div>
     </div>
