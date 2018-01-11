@@ -9,14 +9,32 @@
 $browser-context: 16;
 
 @function rem($pixels, $context: $browser-context) {
-
+  
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
   }
-
+  
   @if (unitless($context)) {
     $context: $context * 1px;
   }
-
+  
   @return $pixels / $context * 1rem;
+}
+
+
+/**
+* EZ Breakpoints
+*/
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+    + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
 }
